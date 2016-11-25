@@ -1,0 +1,12 @@
+<h1 class = "text-center"> My list of restaurants</h1>
+  <div class="container">
+    <div class="row">
+      <% @restaurants.each do |r| %>
+        <div class="col-xs-12 col-sm-4">
+          <%= render "restaurant", restaurant: r %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+<p><%= link_to "New Restaurant", new_restaurant_path%></p>
